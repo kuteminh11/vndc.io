@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Explorer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="images/favicons/favicon-32x32.png">
+    <style>
+      body, html {
+        height: 100%;
+      }
+    </style>
+</head>
+<?php
+    $rs_info = get_content_explorer();
+?>
+<body>
+    <div id="personal-app" class="personal-app">
+        <div class="personal-app-flex">
+            <div class="page-header">
+                <div class="container">
+                    <style type="text/css">
+                        .content > a {
+                            text-decoration: none;
+                        }
+                    </style>
+                    <div class="content"><a href=""><img src="images/logo/logo_vndc-180.png" alt="logo LiveTrade" class="logo"></a>
+                        <div class="right">
+                            <div class="balance"><span>Your balance</span>
+                                <div class="value"><span>1,000,000</span> VNDC</div>
+                            </div>
+                            <div class="main-menu">
+                                <div class="user with-submenu"><span class="actual">Nguyễn Văn A</span>
+                                    <div class="submenu">
+                                        <ul class="submenu-box">
+                                            <li class="item"><a href="dashboard.html"><i class="fa fa-home m-r-10"></i><span>Dashboard</span></a></li>
+                                            <li class="item"><a href="transfer.html"><i class="fa fa-arrow-right m-r-10"></i><span>Transfer</span></a></li>
+                                            <li class="item"><a href="explorer.html"><i class="fa fa-book m-r-10"></i><span>Explorer</span></a></li>
+                                            <hr >
+                                            <li class="item"><a href="profile.html"><i class="fa fa-user-o m-r-10"></i><span>My profile</span></a></li>
+                                            <li class="item"><a href="profile-password-change.html"><i class="fa fa-lock m-r-10"></i><span>Change password</span></a></li>
+                                            <li class="item"><a href="profile-authenticator.html"><i class="fa fa-shield m-r-10"></i><span>Two-step verification</span></a></li>
+                                            <li class="item"><a href="profile-verify-account.html"><i class="fa fa-address-card-o m-r-10"></i><span>Verification account</span></a></li>
+                                            <li class="item"><a href="#" id="logout"><i class="fa fa-sign-out m-r-10"></i><span>Logout</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="main-menu-toggler"></button>
+            <style type="text/css">
+            .languages-select {
+                margin-left: 20px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                color: #fff;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .languages-img {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                margin-right: 5px;
+            }
+
+            .languages-select .languages-img img {
+                max-width: 20px;
+                max-height: 20px;
+            }
+
+            .languages-country {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                line-height: 23px;
+            }
+
+            .languages-country span {
+                color: #173950;
+            }
+            </style>
+                            <div class="languages-select" onclick="change_language('EN')">
+                                <form id="form_lang" action="" method="post" style="margin: 0;">
+                                    <input type="hidden" name="lang_now" id="lang_now" value="EN">
+                                </form>
+                                <div class="languages-img">
+                                    <img src="images/language/english.png" alt="lang - logo" id="change-flat">
+                                </div>
+                                <div class="languages-country">
+                                    <span>EN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content container">
+                <a class="back-link" href="dashboard.html"><span>Dashboard</span></a>
+                <div class="dashboard">
+                    <div class="box box-sm">
+                        <h2 class="box-title"><span><b>Statistics at 22/07/2019 16:44</b></span></h2>
+                        <div class="col-md-12 col-12 m-b-20" style="border-radius: 5px;">
+                            <div class="row p-t-10 p-b-10" style="border-bottom: 1px solid #dee2e6;background-color: #ffffef;">
+                                <div class="col-md-6 col-12"><span style="font-weight: 500;">Total amount of VNDC issued</span></div>
+                                <div class="col-md-6 col-12">98,013,602,000 VNDC</div>
+                            </div>
+                            <div class="row p-t-10 p-b-10" style="background-color: #f1f7ff;border-bottom: 1px solid #dee2e6;">
+                                <div class="col-md-6 col-12"><span style="font-weight: 500;">Total users</span></div>
+                                <div class="col-md-6 col-12">9 Users</div>
+                            </div>
+                            <div class="row p-t-10 p-b-10" style="border-bottom: 1px solid #dee2e6;background-color: #ffffef;">
+                                <div class="col-md-6 col-12"><span style="font-weight: 500;">Total users own VNDC</span></div>
+                                <div class="col-md-6 col-12">7 Users</div>
+                            </div>
+                            <div class="row p-t-10 p-b-10" style="background-color: #f1f7ff;border-bottom: 1px solid #dee2e6;">
+                                <div class="col-md-6 col-12"><span style="font-weight: 500;">24h trading volume</span></div>
+                                <div class="col-md-6 col-12">214,081,000 VNDC</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="history box box-sm">
+                        <h2 class="box-title"><span>Transaction</span></h2>
+                        <div class="table-mobile" style="max-height: 350px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th><span>Method</span></th>
+                                        <th><span>Account</span></th>
+                                        <th><span>Date</span></th>
+                                        <th><span>Amount</span></th>
+                                        <th><span>Status</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><span class="">Withdraw</span></td><td><span>****vana@yopmail.com</span></td><td><span>22/07/2019 15:55:15</span></td><td><span>100,000 VNDC</span></td><td><span>Success</span></td></tr>
+                                    <tr><td><span class="">Withdraw</span></td><td><span>****vanb@gmail.com</span></td><td><span>17/07/2019 15:06:54</span></td><td><span>100,000 VNDC</span></td><td><span>Success</span></td></tr>
+                                    <tr><td><span class="">Deposit</span></td><td><span>****vanc@gmail.com</span></td><td><span>17/07/2019 15:03:11</span></td><td><span>1,000,000 VNDC</span></td><td><span>Success</span></td></tr>
+                                    <tr><td><span class="">Withdraw</span></td><td><span>****vanc@yopmail.com</span></td><td><span>15/07/2019 14:21:37</span></td><td><span>100,000 VNDC</span></td><td><span>Success</span></td></tr>                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="footer">
+                <div class="page-footer">
+                    <div class="container flex-row">
+                        <div class="copyright text-left">
+                            <p class="m-b-0">Copyright © 2019 VNDC.io, All Rights Reserved.</p></span>
+                        </div>
+                        <div class="social text-left text-md-right">
+                            <ul id="social" class="flex-row float-r m-b-0">
+                                <li class="float-l m-l-20"><a target="_blank" href="https://twitter.com/0Vndc"><i class="fa fa-twitter-square"></i> </a></li>
+                                <li class="float-l m-l-20"><a target="_blank" href="https://t.me/joinchat/AAAAAElqlke77-TPM4vHzQ"><i class="fa fa-telegram"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vendors.js"></script>
+    <script src="js/jquery-3.3.0.min.js"></script>
+    <script src="js/personal.js"></script>    
+</body>
+</html>

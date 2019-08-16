@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Transfer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="images/favicons/favicon-32x32.png">
+    <style>
+      body, html {
+        height: 100%;
+      }
+    </style>
+</head>
+<body>
+    <div id="personal-app" class="personal-app">
+        <div class="personal-app-flex">
+            
+            <div class="page-header">
+                <div class="container">
+                    <style type="text/css">
+                        .content > a {
+                            text-decoration: none;
+                        }
+                    </style>
+                    <div class="content"><a href=""><img src="images/logo/logo_vndc-180.png" alt="logo LiveTrade" class="logo"></a>
+                        <div class="right">
+                            <div class="balance"><span>Your balance</span>
+                                <div class="value"><span>1,000,000</span> VNDC</div>
+                            </div>
+                            <div class="main-menu">
+                                <div class="user with-submenu"><span class="actual">Nguyễn Văn A</span>
+                                    <div class="submenu">
+                                        <ul class="submenu-box">
+                                            <li class="item"><a href="dashboard.html"><i class="fa fa-home m-r-10"></i><span>Dashboard</span></a></li>
+                                            <li class="item"><a href="transfer.html"><i class="fa fa-arrow-right m-r-10"></i><span>Transfer</span></a></li>
+                                            <li class="item"><a href="explorer.html"><i class="fa fa-book m-r-10"></i><span>Explorer</span></a></li>
+                                            <hr >
+                                            <li class="item"><a href="profile.html"><i class="fa fa-user-o m-r-10"></i><span>My profile</span></a></li>
+                                            <li class="item"><a href="profile-password-change.html"><i class="fa fa-lock m-r-10"></i><span>Change password</span></a></li>
+                                            <li class="item"><a href="profile-authenticator.html"><i class="fa fa-shield m-r-10"></i><span>Two-step verification</span></a></li>
+                                            <li class="item"><a href="profile-verify-account.html"><i class="fa fa-address-card-o m-r-10"></i><span>Verification account</span></a></li>
+                                            <li class="item"><a href="#" id="logout"><i class="fa fa-sign-out m-r-10"></i><span>Logout</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="main-menu-toggler"></button>
+            <style type="text/css">
+            .languages-select {
+                margin-left: 20px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                color: #fff;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .languages-img {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                margin-right: 5px;
+            }
+
+            .languages-select .languages-img img {
+                max-width: 20px;
+                max-height: 20px;
+            }
+
+            .languages-country {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                line-height: 23px;
+            }
+
+            .languages-country span {
+                color: #173950;
+            }
+            </style>
+                            <div class="languages-select" onclick="change_language('EN')">
+                                <form id="form_lang" action="" method="post" style="margin: 0;">
+                                    <input type="hidden" name="lang_now" id="lang_now" value="EN">
+                                </form>
+                                <div class="languages-img">
+                                    <img src="images/language/english.png" alt="lang - logo" id="change-flat">
+                                </div>
+                                <div class="languages-country">
+                                    <span>EN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content container">
+                <a class="back-link" href="dashboard.html"><span>Dashboard</span></a>
+                <div class="dashboard">                    
+                    <div class="half-cols">
+                        <div class="balance-box box box-sm">
+                            <h2 class="box-title"><span>Transfer VNDC</h2>                            
+                            <div class="form form-input form-transfer">
+                                <p class="perex"><span>To transfer VNDC, you need to enter the amount of VNDC to be transferred and the Receiving Account (email or phone number). <br> The minimum amount of VNDC transferred is 10,000 VNDC. <br> Transfer fee is 0.1% (minimum 2,000 VNDC , largest 200,000 VNDC).</span></p>
+                                <div class="form-row" style="margin-right: 0px; margin-left: 0px;">
+                                    <label class="label" style="width: 100%;"><span>Account Receice</span></label>
+                                    <input id="accountReceive" placeholder="Email/Phone" class="input" style="width: 100%;">
+                                </div>
+                                <div class="form-row" style="margin-right: 0px; margin-left: 0px;">
+                                    <label class="label" style="width: 100%;">Amount Transfer</label>
+                                    <input id="cashinAmount" class="input" value="10,000" style="width: 100%;" data-min="10,000">
+                                </div>
+                                <div class="form-row" style="margin-right: 0px; margin-left: 0px;">
+                                    <label class="label" style="width: 100%;">Total Amount (plus fee <span id="feeShow">2,000</span> VNDC)</label>
+                                    <input id="totalAmount" class="input" value="12,000" style="width: 100%;" data-percentfee="0.1" data-feemin="2000" data-feemax="200000">
+                                    <p><span class="error-text-input" style="color: red;"></span></p>
+                                </div>
+                                <div class="submit">
+                                    <button id="btnTransfer" type="button" class="btn"><span>Transfer</span></button>
+                                    <div style="width: 148px; text-align: center; display: none;" id="loading_input">
+                                        <div class="loading"></div>
+                                    </div>                                    
+                                </div>
+                            </div>
+<style type="text/css">
+.form-transfer {
+    padding: 0 15px 15px;
+}
+.info-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #17a2b8;
+    text-align: center;
+}
+.info-detail {
+    margin: 0px 10px 5px;
+    letter-spacing: 1px;
+}
+@media (max-width: 767px) {
+    .form-transfer {
+        padding: 0;
+    }
+    .alert {
+        padding: .55rem 0.55rem;
+    }
+}
+</style>
+                            <div class="form form-authen form-transfer" style="display: none;">
+                                <div class="detail-transfer alert alert-info">
+                                    <p class="info-title">Xác nhận thông tin chuyển</p>
+                                    <p class="info-detail">Account Receice: <span class="fullname-receiver">Nguyễn Văn A</span></p>
+                                    <p class="info-detail">Amount Transfer: <span class="amount-receiver">10,000 VNDC</span></p>
+                                    <p class="info-detail">Fees: <span class="fee-receiver">2,000 VNDC</span></p>
+                                    <p class="info-detail">Total Amount: <span class="total-receiver">12,000 VNDC</span></p>
+                                </div>
+                                <p class="perex" style="margin-bottom: 5px;"><span>Use random code in Google Authenticator application to authenticate orders</span></p>
+                                <div class="form-row" style="margin-right: 0px; margin-left: 0px;">
+                                    <label class="label" style="width: 100%;"><span>Please enter the authentication code (Google Authenticator)</span></label>
+                                    <input id="authenCode" class="input" style="width: 100%;">
+                                    <p><span class="error-text-authen" style="color: red;"></span></p>
+                                </div>
+                                <div class="submit">
+                                    <button id="btnCancel" type="button" class="btn btn-cancel" style="margin-right: 20px;"><span>Back</span></button>
+                                    <button id="btnAuthen" type="button" class="btn"><span>Authentication</span></button>
+                                    <div style="width: 148px; text-align: center; display: none;" id="loading_authen">
+                                        <div class="loading"></div>
+                                    </div>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="referral-box box box-sm">
+                            <h2 class="box-title"><span>History of VNDC transfer / receipt</span></h2>
+                            <div class="table-mobile">
+                              <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th><span>Type</span></th>                                          
+                                            <th><span>Receiver / transfer</span></th>                                          
+                                            <th><span>Amount</span></th>
+                                            <th><span>Date</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="text-success">Transfer</span></td>
+                                            <td><span>abc@vndc.io</span></td>
+                                            <td><span>12,000</span></td>
+                                            <td><span>21/06/2019</span></td>
+                                        </tr>
+                                    </tbody>
+                              </table>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="page-footer">
+                    <div class="container flex-row">
+                        <div class="copyright text-left">
+                            <p class="m-b-0">Copyright © 2019 VNDC.io, All Rights Reserved.</p></span>
+                        </div>
+                        <div class="social text-left text-md-right">
+                            <ul id="social" class="flex-row float-r m-b-0">
+                                <li class="float-l m-l-20"><a target="_blank" href="https://twitter.com/0Vndc"><i class="fa fa-twitter-square"></i> </a></li>
+                                <li class="float-l m-l-20"><a target="_blank" href="https://t.me/joinchat/AAAAAElqlke77-TPM4vHzQ"><i class="fa fa-telegram"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>         
+        </div>
+    </div>
+    <script src="js/vendors.js"></script>
+    <script src="js/jquery-3.3.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>    
+    <script src="js/personal.js"></script>
+    <script src="js/transfer.js"></script>
+
+    <script type="text/javascript">
+        function copy(e)
+        {
+            var $input = $('#'+e);
+            if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+              var el = $input.get(0);
+              var editable = el.contentEditable;
+              var readOnly = el.readOnly;
+              el.contentEditable = true;
+              el.readOnly = false;
+              var range = document.createRange();
+              range.selectNodeContents(el);
+              var sel = window.getSelection();
+              sel.removeAllRanges();
+              sel.addRange(range);
+              el.setSelectionRange(0, 999999);
+              el.contentEditable = editable;
+              el.readOnly = readOnly;
+            } else {
+              $input.select();
+            }
+            document.execCommand('copy');
+        }
+    </script>
+
+    <script type="text/javascript">
+        Number.prototype.formatMoney = function(c, d, t){
+            var n = this,
+                c = isNaN(c = Math.abs(c)) ? 2 : c,
+                d = d == undefined ? "." : d,
+                t = t == undefined ? "," : t,
+                s = n < 0 ? "-" : "",
+                i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))),
+                j = (j = i.length) > 3 ? j % 3 : 0;
+               return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+        };
+
+        //Hàm kiểm tra số lượng hợp lệ
+        function checkcashinAmount(id, id_error, id_total, fee, percent_fee) {
+            var limit_min = $("#"+id).data('min');
+            var limit_min_format = Number(limit_min).formatMoney(0, '.', ',');
+            var cashinAmount = $("#"+id).val();
+            cashinAmount = cashinAmount.replace(/,/g , "");
+            if (cashinAmount == '' || isNaN(cashinAmount)) {
+                $("#"+id).val(limit_min_format);
+                $("."+id_error).show();
+                $("."+id_error).html("Invalid_amount");
+            }
+            else if (Number(cashinAmount) < Number(limit_min)) {
+                $("#"+id).val(limit_min_format);
+                $("."+id_error).show();
+                $("."+id_error).html("Limit_min "+limit_min_format+" VNDC");
+            }
+            else {
+                $("."+id_error).html("");
+                $("."+id_error).hide("");
+                $("#"+id).val(Number(cashinAmount).formatMoney(0, '.', ','));                
+            }
+
+            if (fee != '') {
+                var total = Number(cashinAmount) + (Number(fee) + (Number(cashinAmount)*Number(percent_fee)));
+                if (Number(total) > 0) {
+                    $("#"+id_total).val(Number(total).formatMoney(0, '.', ','));
+                }
+                else {
+                    $("#"+id_total).val('0');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

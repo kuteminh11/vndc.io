@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Profile</title> 
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/util.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/imgpicker.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="images/favicons/favicon-32x32.png">
+    <style>
+      body, html {
+        height: 100%;
+      }
+    </style>
+</head>
+<body>
+    <div id="personal-app" class="personal-app">
+        <div class="personal-app-flex">
+                        <div class="page-header">
+                <div class="container">
+                    <style type="text/css">
+                        .content > a {
+                            text-decoration: none;
+                        }
+                    </style>
+                    <div class="content"><a href=""><img src="images/logo/logo_vndc-180.png" alt="logo LiveTrade" class="logo"></a>
+                        <div class="right">
+                            <div class="balance"><span>Your balance</span>
+                                <div class="value"><span>1,000,000</span> VNDC</div>
+                            </div>
+                            <div class="main-menu">
+                                <div class="user with-submenu"><span class="actual">Nguyễn Văn A</span>
+                                    <div class="submenu">
+                                        <ul class="submenu-box">
+                                            <li class="item"><a href="dashboard.html"><i class="fa fa-home m-r-10"></i><span>Dashboard</span></a></li>
+                                            <li class="item"><a href="transfer.html"><i class="fa fa-arrow-right m-r-10"></i><span>Transfer</span></a></li>
+                                            <li class="item"><a href="explorer.html"><i class="fa fa-book m-r-10"></i><span>Explorer</span></a></li>
+                                            <hr >
+                                            <li class="item"><a href="profile.html"><i class="fa fa-user-o m-r-10"></i><span>My profile</span></a></li>
+                                            <li class="item"><a href="profile-password-change.html"><i class="fa fa-lock m-r-10"></i><span>Change password</span></a></li>
+                                            <li class="item"><a href="profile-authenticator.html"><i class="fa fa-shield m-r-10"></i><span>Two-step verification</span></a></li>
+                                            <li class="item"><a href="profile-verify-account.html"><i class="fa fa-address-card-o m-r-10"></i><span>Verification account</span></a></li>
+                                            <li class="item"><a href="#" id="logout"><i class="fa fa-sign-out m-r-10"></i><span>Logout</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="main-menu-toggler"></button>
+            <style type="text/css">
+            .languages-select {
+                margin-left: 20px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                color: #fff;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .languages-img {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                margin-right: 5px;
+            }
+
+            .languages-select .languages-img img {
+                max-width: 20px;
+                max-height: 20px;
+            }
+
+            .languages-country {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                line-height: 23px;
+            }
+
+            .languages-country span {
+                color: #173950;
+            }
+            </style>
+                            <div class="languages-select" onclick="change_language('EN')">
+                                <form id="form_lang" action="" method="post" style="margin: 0;">
+                                    <input type="hidden" name="lang_now" id="lang_now" value="EN">
+                                </form>
+                                <div class="languages-img">
+                                    <img src="images/language/english.png" alt="lang - logo" id="change-flat">
+                                </div>
+                                <div class="languages-country">
+                                    <span>EN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content container">                
+                <div>
+                    <a class="back-link" href="dashboard.html"><span>Dashboard</span></a>
+                    <div class="box box-with-menu settings">
+                        <div class="menu">
+                            <a href="profile.html">
+                                <span>My profile</span>
+                            </a>
+                            <a href="profile-password-change.html" >
+                                <span>Change password</span>
+                            </a>
+                            <a href="profile-authenticator.html" >
+                                <span>Two-step verification</span>
+                            </a>
+                            <a href="profile-verify-account.html"  class="active" aria-current="page">
+                                <span>Verification account</span>
+                            </a>
+                        </div>
+
+                        <form class="form right verify-account">
+                            <div class="step-start">
+                                <h2 class="box-title"><span>Verification account</span></h2>
+                                <p class="m-b-5"><span>To begin verification process, please have your official identity documents ready</span></p>
+                                <p class="m-b-20"><span>(International Passport, National ID)</span></p>
+                            </div>    
+                            <hr>
+                            <div class="step-informations row p-l-10 p-r-10">
+                                <div class="col-12 "><h3>Informations</h3></div>
+                                <div class="col-12 m-t-20">
+                                    <label class="label" for="type_document"></label>
+                                    <div class="input-group">
+                                        <select id="type_document" name="type_document" class="custom-select input">
+                                            <option value="ID">ID Card</option>
+                                            <option value="PP">Passport</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 m-t-20">
+                                    <label class="label" for="document_country">Country</label>
+                                    <div class="input-group">
+                                        <select id="document_country" name="document_country" class="custom-select input">
+                                            <option value="VN">Vietnam</option>
+                                            <option value="OT">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 m-t-20">
+                                    <label class="label" for="document_number">Document number</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input" id="document_number" name="document_number">
+                                    </div>
+                                </div>
+                                <div class="col-12 m-t-20">
+                                    <label class="label" for="document_date">Document day</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input" id="document_date" data-format="date" name="document_date" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-12 m-t-20">
+                                    <label class="label" for="birthday_day">Birthday</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input" id="birthday_day" data-format="date" name="birthday_day" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-12 m-t-20">
+                                    <label class="label" for="gender">Gender</label>
+                                    <div class="input-group">
+                                        <select id="gender" name="gender" class="custom-select input">
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 m-t-20 m-b-20">
+                                    <label class="label" for="address">Address</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input" id="address" name="address" >
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="step-images row p-l-10 p-r-10">
+                                <div class="col-12 "><h3>Upload your photo</h3></div>
+                                <div class="col-12 m-t-20" >
+                                    <div class="div-upload-img">
+                                        <p class="m-b-5">Document image (front). The maximum file size is 5MB</p>
+                                        <div class="upload-wrapper files-holder">
+                                            <p>The file format allows: JPG, GIF, PNG, JPEG. <br><a onclick="opencamref(1)" >Click here to upload a file</a></p></br>
+                                            <span style="position: relative" class="fileinput-filename1" id="fileinput-filename1"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <span class="clearfix"></span><br>
+                                <div class="col-12 m-t-20" >
+                                    <div class="div-upload-img">
+                                        <p class="m-b-5">Document image (back). The maximum file size is 5MB</p>
+                                        <div class="upload-wrapper files-holder">
+                                            <p>The file format allows: JPG, GIF, PNG, JPEG. <br><a onclick="opencamref(2)" >Click here to upload a file</a></p></br>
+                                            <span style="position: relative" class="fileinput-filename2" id="fileinput-filename2"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <span class="clearfix"></span><br>
+                                <div class="col-12 m-t-20" >
+                                    <div class="div-upload-img">
+                                        <p class="m-b-5">Selfie image with your verification document. The maximum file size is 5MB</p>
+                                        <div class="upload-wrapper files-holder">
+                                            <p>The file format allows: JPG, GIF, PNG, JPEG. <br><a onclick="opencamref(2)" >Click here to upload a file</a></p></br>
+                                            <span style="position: relative" class="fileinput-filename3" id="fileinput-filename3"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><span class="error-text m-l-20"></span></p>
+                                <div class="col-12 m-t-20">
+                                    <button type="button" id="btn_submit_verify" class="btn btn-submit"><span>Submit</span></button>
+                                    <div style="width: 148px; text-align: center; display: none;" id="loading">
+                                        <div class="loading"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="number_images" id="number_images" value="1">
+                            <input type="hidden" name="txtFile1" id="txtFile1">
+                            <input type="hidden" name="txtFile2" id="txtFile2">
+                            <input type="hidden" name="txtFile3" id="txtFile3">
+                        </form>
+
+                        <button type="button" class="btn btn-default" data-ip-modal="#avatarModal" style="display: none" id="opencamere">Edit avatar</button>
+                        <div class="ip-modal" id="avatarModal">
+                            <input type="hidden" name="login_userid" id="login_userid" value="<?=$_SESSION['username']?>">
+                            <div class="ip-modal-dialog">
+                                <div class="ip-modal-content" style="border-radius: 10px;">
+                                    <div class="ip-modal-header">
+                                        <a class="ip-close" title="Close">&times;</a>
+                                        <h4 class="ip-modal-title">Upload Image</h4>
+                                    </div>
+                                    <div class="ip-modal-body" align="center">
+                                        <p>Image  example</p>
+                                        <img id="img_sample" class="mx-auto d-block" style="max-width: 376px;" src="" /><br>
+                                        <div class="btn btn-primary ip-upload">Upload <input type="file" name="file" class="ip-file"></div>
+                                        <!-- <button type="button" class="btn btn-primary ip-webcam">Webcam</button> -->
+                                        <button type="button" class="btn btn-info ip-edit">Edit</button>
+                                        <button type="button" class="btn btn-danger ip-delete">Delete</button>
+
+                                        <div class="alert ip-alert"></div>
+                                        <div class="ip-info">To crop this image, drag a region below and then click "Save Image"</div>
+                                        <div class="ip-preview"></div>
+                                        <div class="ip-rotate">
+                                            <button type="button" class="btn btn-default ip-rotate-ccw" title="Rotate counter-clockwise"><i class="icon-ccw"></i></button>
+                                            <button type="button" class="btn btn-default ip-rotate-cw" title="Rotate clockwise"><i class="icon-cw"></i></button>
+                                        </div>
+                                        <div class="ip-progress">
+                                            <div class="text">Processing</div>
+                                            <div class="progress progress-striped active"><div class="progress-bar"></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="ip-modal-footer">
+                                        <div class="ip-actions">
+                                            <button type="button" class="btn btn-success ip-save">Save Image</button>
+                                            <button type="button" class="btn btn-primary ip-capture">Capture</button>
+                                            <button type="button" class="btn btn-default ip-cancel">Cancel</button>
+                                        </div>
+                                        <button type="button" class="btn btn-default ip-close">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="page-footer">
+                    <div class="container flex-row">
+                        <div class="copyright text-left">
+                            <p class="m-b-0">Copyright © 2019 VNDC.io, All Rights Reserved.</p></span>
+                        </div>
+                        <div class="social text-left text-md-right">
+                            <ul id="social" class="flex-row float-r m-b-0">
+                                <li class="float-l m-l-20"><a target="_blank" href="https://twitter.com/0Vndc"><i class="fa fa-twitter-square"></i> </a></li>
+                                <li class="float-l m-l-20"><a target="_blank" href="https://t.me/joinchat/AAAAAElqlke77-TPM4vHzQ"><i class="fa fa-telegram"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vendors.js"></script>
+    <script src="js/jquery-3.3.0.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/personal.js"></script>
+    <script src="js/profile.js"></script>
+
+    <script src="js/jquery.imgveryaccound.js" type="text/javascript"></script>
+    <script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script>        
+        (function () {
+            $('.datepicker').datepicker({
+                locale: 'ru'
+            });
+        });
+
+        $('#opencamere').click();
+
+        function opencamref(e){
+            $('#number_images').val(e);
+            $('#opencamere').click();
+            if(e == 1)
+            {
+                $("#img_sample").attr("src", "images/inc/mattruoc.png");
+            }
+            else if(e == 2)
+            {
+                $("#img_sample").attr("src", "images/inc/matsau.png");
+            }
+            else if(e == 3)
+            {
+                $("#img_sample").attr("src", "images/inc/selfie-id-sample.png");
+            }
+        }
+
+        $(function() {
+            var time = function(){return'?'+new Date().getTime()};
+
+            // Avatar setup
+            $('#avatarModal').imgPicker({
+                url: 'server/upload_avatar.php',
+                aspectRatio: 1,
+                deleteComplete: function() {
+                    $('#avatar2').attr('src', '//gravatar.com/avatar/0?d=mm&s=150');
+                    this.modal('hide');
+                },
+                uploadSuccess: function(image) {
+                    // Calculate the default selection for the cropper
+                    var select = (image.width > image.height) ?
+                            [(image.width-image.height)/2, 0, image.height, image.height] :
+                            [0, (image.height-image.width)/2, image.width, image.width];
+
+                    this.options.setSelect = select;
+                },
+                cropSuccess: function(image) {
+                    $('#avatar2').attr('src', image.versions.avatar.url +time() );
+                    this.modal('hide');
+                }
+            });
+
+            // Demo only
+            $('.navbar-toggle').on('click',function(){$('.navbar-nav').toggleClass('navbar-collapse')});
+            $(window).resize(function(e){if($(document).width()>=430)$('.navbar-nav').removeClass('navbar-collapse')});
+        });
+
+        function doesFileExist(urlToFile)
+        {
+            var xhr = new XMLHttpRequest();
+            xhr.open('HEAD', urlToFile, false);
+            xhr.send();
+
+            if (xhr.status == "404") {
+                console.log("File doesn't exist");
+                return false;
+            } else {
+                console.log("File exists");
+                return true;
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $('#document_date').datepicker({format: 'dd/mm/yyyy'});
+        $('#birthday_day').datepicker({format: 'dd/mm/yyyy'});
+    </script>
+</body>
+</html>

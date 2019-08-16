@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Withdraw</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="images/favicons/favicon-32x32.png">
+    <style>
+      body, html {
+        height: 100%;
+      }
+    </style>
+</head>
+<body>
+    <div id="personal-app" class="personal-app">
+        <div class="personal-app-flex">
+                        <div class="page-header">
+                <div class="container">
+                    <style type="text/css">
+                        .content > a {
+                            text-decoration: none;
+                        }
+                    </style>
+                    <div class="content"><a href=""><img src="images/logo/logo_vndc-180.png" alt="logo LiveTrade" class="logo"></a>
+                        <div class="right">
+                            <div class="balance"><span>Your balance</span>
+                                <div class="value"><span>1,000,000</span> VNDC</div>
+                            </div>
+                            <div class="main-menu">
+                                <div class="user with-submenu"><span class="actual">Nguyễn Văn A</span>
+                                    <div class="submenu">
+                                        <ul class="submenu-box">
+                                            <li class="item"><a href="dashboard.html"><i class="fa fa-home m-r-10"></i><span>Dashboard</span></a></li>
+                                            <li class="item"><a href="transfer.html"><i class="fa fa-arrow-right m-r-10"></i><span>Transfer</span></a></li>
+                                            <li class="item"><a href="explorer.html"><i class="fa fa-book m-r-10"></i><span>Explorer</span></a></li>
+                                            <hr >
+                                            <li class="item"><a href="profile.html"><i class="fa fa-user-o m-r-10"></i><span>My profile</span></a></li>
+                                            <li class="item"><a href="profile-password-change.html"><i class="fa fa-lock m-r-10"></i><span>Change password</span></a></li>
+                                            <li class="item"><a href="profile-authenticator.html"><i class="fa fa-shield m-r-10"></i><span>Two-step verification</span></a></li>
+                                            <li class="item"><a href="profile-verify-account.html"><i class="fa fa-address-card-o m-r-10"></i><span>Verification account</span></a></li>
+                                            <li class="item"><a href="#" id="logout"><i class="fa fa-sign-out m-r-10"></i><span>Logout</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="main-menu-toggler"></button>
+            <style type="text/css">
+            .languages-select {
+                margin-left: 20px;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                color: #fff;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .languages-img {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                margin-right: 5px;
+            }
+
+            .languages-select .languages-img img {
+                max-width: 20px;
+                max-height: 20px;
+            }
+
+            .languages-country {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                line-height: 23px;
+            }
+
+            .languages-country span {
+                color: #173950;
+            }
+            </style>
+                            <div class="languages-select" onclick="change_language('EN')">
+                                <form id="form_lang" action="" method="post" style="margin: 0;">
+                                    <input type="hidden" name="lang_now" id="lang_now" value="EN">
+                                </form>
+                                <div class="languages-img">
+                                    <img src="images/language/english.png" alt="lang - logo" id="change-flat">
+                                </div>
+                                <div class="languages-country">
+                                    <span>EN</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content container">
+<style type="text/css">
+.method-selected {
+    background: #d3364a !important;
+    color: #fff !important;
+}
+.btn-withdraw-bank, .btn-withdraw-wallet {
+    width: 80%;
+}
+.hidden {
+    display: none;
+}
+#sl_bank {
+    max-width: 334px;
+}
+.personal-app .buy-tokens .perex {
+    max-width: 600px;
+    font-size: 14px;
+}
+.form .input-area {
+    height: 92px;
+    padding: 14px;
+}
+
+@media (max-width:767px) {
+    .btn-withdraw-bank, .btn-withdraw-wallet {
+        width: 80%;
+    }
+    #sl_bank {
+        max-width: 100%;
+    }
+}
+</style>
+                <div class="dashboard">
+                    <a class="back-link" href="dashboard.html"><span>Dashboard</span></a>
+                    <div class="box">                        
+                        <h2 class="box-title"><span>Withdraw</span></h2>
+                        <p class="perex"><span>Enter the amount of VNDC and address wallet VNDC you want to withdraw.</span></p>
+                        <div class="row">
+                            <div class="col-md-6 col-12 m-b-20 text-center">
+                                <a href="withdraw.html" class="btn btn-white-red-outline btn-sm btn-withdraw-bank method-selected">
+                                    <span>Internet Banking</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-12 m-b-20 text-center">
+                                <a href="withdraw-wallet.html" class="btn btn-white-red-outline btn-sm btn-withdraw-wallet ">
+                                    <span>Wallet VNDC</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                                <style type="text/css">
+                .detail-transaction {
+                    border: 1px solid #ccc;
+                    border-width: 1px;
+                    border-radius: 5px;
+                }
+                .detail-transaction .detail-transaction-row {
+                    padding: 10px 20px;
+                    min-height: 46px;
+                }
+                </style>
+
+                <div class="withdraw-by-ibanking buy-tokens form ">                    
+                    <div class="box ">
+                        <h2 class="box-title"><span>Withdraw VNDC by Internet Banking</span></h2>
+                        <p class="perex">
+                            <span>Enter the amount of VNDC and address wallet VNDC you want to withdraw.</span><br>
+                            <span>- Minimum transaction = 100,000 VNDC.</span><br>
+                            <span>- Maximum transaction = 100,000,000 VNDC.</span><br>
+                            <span>- Transaction fee is calculated according to your withdrawal amount.</span><br>
+                            <span style="padding-left: 10px;">+ Less than or equal to 10,000,000 VNDC: transaction fee of 11,000 VNDC.</span><br>
+                            <span style="padding-left: 10px;">+ Greater than 10,000,000 VNDC: 10,000 VNDC + 0.11% of withdrawals.</span>
+                        </p>
+                        <div class="select-currency">
+                            <div class="left">
+                                <div class="title"><span>How many VNDC do you want to withdrawal?</span></div>
+                                <label for="cashinAmount">Amount</label>
+                                <div class="currency-input">
+                                    <div class="icon-input icon-input-right">                        
+                                        <span class="icon-text">VNDC</span>
+                                        <input id="cashinAmount" name="cashinAmount" type="text" class="input" value="100,000" data-min="100000" data-max="100000000">
+                                        <span class="valWidth">100,000</span>
+                                    </div>
+                                </div>
+                                <label for="totalAmount">Total amount (included <span id="sp-fees">11,000 VNDC</span> Fees)</label>
+                                <div class="currency-input">
+                                    <div class="icon-input icon-input-right">                        
+                                        <span class="icon-text">VNDC</span>
+                                        <input id="totalAmount" name="totalAmount" type="text" class="input" value="89,000" data-min="100000">
+                                    </div>
+                                </div>
+
+                                <div id="error-amount-invalid" class="info info-req hidden"><span>Invalid amount</span></div>
+                                <div id="error-amount-min" class="info info-req hidden"><span>Minimum transaction = 100,000 VNDC</span></div>
+                                <div id="error-amount-max" class="info info-req hidden"><span>Maximum transaction = 100,000,000 VNDC</span></div>
+                                <div id="error-show" class="info info-req hidden"><span>Payment failure</span></div>
+                            </div>
+                            <div class="right">
+                                <div class="title"><span>What is your withdrawal banking information?</span></div>
+                                <div class="form form-input">
+                                    <label for="sl_bank">Choose bank</label>
+                                    <div class="form-row" style="margin-right: 0px; margin-left: 0px;">                        
+                                        <select id="sl_bank" name="sl_bank" class="input w-full">
+                                            <option value="VCB" data-bankcode="970436">Vietcombank - Ngân hàng TMCP Ngoại thương Việt Nam</option><option value="STB" data-bankcode="970403">Sacombank - Ngân Hàng TMCP Sài Gòn Thương Tín</option><option value="DAB" data-bankcode="970406">DongABank - Ngân Hàng TMCP Đông Á</option><option value="TCB" data-bankcode="970407">Techcombank - Ngân hàng TMCP Kỹ thương Việt Nam</option><option value="VIB" data-bankcode="970441">VIB - Ngân hàng quốc tế</option><option value="SGB" data-bankcode="970400">Saigonbank - Ngân hàng TMCP Sài Gòn Công Thương </option><option value="VPB" data-bankcode="970432">VPBank - Ngân hàng TMCP Việt Nam Thịnh Vượng</option><option value="MB" data-bankcode="970422">MB - Ngân hàng TMCP Quân đội </option><option value="OCB" data-bankcode="970448">OCB - Ngân hàng TMCP Phương Đông</option><option value="OCEB" data-bankcode="970414">OceanBank - Ngân hàng TMCP Đại Dương</option><option value="NAB" data-bankcode="970428">NamABank - Ngân hàng TMCP Nam Á</option><option value="ABB" data-bankcode="970459">ABBANK - Ngân hàng TMCP An Bình </option><option value="SHB" data-bankcode="970443">SHB - Ngân hàng TMCP Sài Gòn – Hà Nội</option><option value="VAB" data-bankcode="970427">VietABank - Ngân hàng TMCP Việt Á</option><option value="GPB" data-bankcode="970408">GPBank - Ngân hàng TM TNHH MTV Dầu Khí Toàn Cầu</option><option value="MRTB" data-bankcode="970426">MSB - Ngân hàng TMCP Hàng Hải Việt Nam</option><option value="HDB" data-bankcode="970437">HDBank - Ngân hàng TMCP Phát Triển Thành Phố Hồ Chí Minh</option><option value="HLB" data-bankcode="970442">Hongleong Bank - Ngân hàng TNHH MTV Hongleong Việt Nam</option><option value="" data-bankcode="970438">BAOVIET Bank - Ngân hàng Bảo Việt</option><option value="PUB" data-bankcode="970439">Public Bank - Ngân hàng TNHH MTV Public Việt Nam</option><option value="VTB" data-bankcode="970415">VietinBank - Ngân Hàng TMCP Công Thương Việt Nam</option><option value="EXB" data-bankcode="970431">Eximbank - Ngân hàng TMCP Xuất nhập khẩu Việt Nam</option><option value="SEA" data-bankcode="970440">SeABank - Ngân hàng TMCP Đông Nam Á</option><option value="SCB" data-bankcode="970429">SCB - Ngân hàng TMCP Sài Gòn</option><option value="NCB" data-bankcode="970419">NCB -Ngân hàng TMCP Quốc Dân</option><option value="BIDV" data-bankcode="970418">BIDV - Ngân hàng TMCP Đầu tư và Phát triển Việt Nam</option><option value="SIB" data-bankcode="970424">Shinhan Bank - Ngân hàng TNHH MTV Shinhan Việt Nam</option><option value="VIETB" data-bankcode="970433">Vietbank - Ngân hàng TMCP Việt Nam Thương Tín</option><option value="PGB" data-bankcode="970430">PG Bank - Ngân hàng TMCP Xăng Dầu Petrolimex</option><option value="PVB" data-bankcode="970412">PVcomBank - Ngân hàng TMCP Đại Chúng Việt Nam</option><option value="VRB" data-bankcode="970421">VRB - Ngân hàng Liên Doanh Việt Nga</option><option value="INDB" data-bankcode="970434">IVB - Ngân hàng TNHH Indovina</option><option value="WRB" data-bankcode="970457">Woori Bank - Ngân hàng Wooribank</option>
+                                        </select>
+                                    </div>
+                                    <label for="bank-branch">Branch</label>
+                                    <div class="form-row" style="margin-right: 0px; margin-left: 0px;">                        
+                                        <input type="text" id="bank-branch" name="bank-branch" class="input w-full">
+                                    </div>
+                                    <label for="account_number">Credit Account</label>
+                                    <div class="form-row" style="margin-right: 0px; margin-left: 0px;">                        
+                                        <input type="text" id="account_number" name="account_number" class="input w-full">
+                                    </div>
+                                    <label for="bank-beneficiary-name">Beneficiary name</label>
+                                    <div class="form-row" style="margin-right: 0px; margin-left: 0px;">                        
+                                        <input type="text" id="bank-beneficiary-name" name="bank-beneficiary-name" class="input w-full" value="Nguyễn Văn A" readonly>
+                                    </div>                    
+                                    <div class="submit">
+                                        <button id="btnCheckWithdraw" type="button" class="btn"><span>Withdraw</span></button>
+                                        <div style="width: 148px; text-align: center; display: none;" id="loading_input">
+                                            <div class="loading"></div>
+                                        </div>                                    
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box box-result-bank hidden"><h2 class="box-title"><span>Authentication code</span></h2>
+                        <div class="row">
+                            <div class="col-md-4 col-12 m-b-30">
+                                <input type="text" id="authen-code" name="authen-code" class="input w-full m-b-5" aria-describedby="basic-addon4" placeholder="Please enter the authentication code'">
+                                <span class="error-authen" style="display: none; margin-top: 15px; color: red;"></span><br>
+                                <button id="btnWithdraw" type="button" class="btn m-t-10"><span>Authentication</span></button>
+                                <div style="width: 148px; text-align: center; display: none;" id="loading_input_authen">
+                                    <div class="loading"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="footer">
+                <div class="page-footer">
+                    <div class="container flex-row">
+                        <div class="copyright text-left">
+                            <p class="m-b-0">Copyright © 2019 VNDC.io, All Rights Reserved.</p></span>
+                        </div>
+                        <div class="social text-left text-md-right">
+                            <ul id="social" class="flex-row float-r m-b-0">
+                                <li class="float-l m-l-20"><a target="_blank" href="https://twitter.com/0Vndc"><i class="fa fa-twitter-square"></i> </a></li>
+                                <li class="float-l m-l-20"><a target="_blank" href="https://t.me/joinchat/AAAAAElqlke77-TPM4vHzQ"><i class="fa fa-telegram"></i> </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vendors.js"></script>
+    <script src="js/jquery-3.3.0.min.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/personal.js"></script>
+    <script src="js/withdraw.js"></script>
+</body>
+</html>
