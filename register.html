@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Font Tinos -->
+    <link href="https://fonts.googleapis.com/css?family=Tinos&display=swap&subset=vietnamese" rel="stylesheet">
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css?v<?php echo time();?>">
+    <!-- util css -->
+    <link rel="stylesheet" href="css/util.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- favicon images -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="images/favicons/favicon-32x32.png">
+</head>
+<body>
+    <div class="main">
+        <section class="signup">
+            <div class="container">
+                <a class="back-link" href=""><span>Home</span></a>
+                <div class="signup-content">
+                    <div class="signup-form m-md-l-45 m-md-r-45 m-b-45 m-md-b-0">
+                        <h2 class="form-title">Sign Up</h2>
+                            <form method="POST" class="register-form validate-form" id="register-form">
+                                <div class="form-group validate-input" data-validate="Name is required">
+                                    <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                    <input class="input100" type="text" name="name" id="name" placeholder="Your Name" />
+                                </div>
+                                <div class="form-group validate-input" data-validate="Invalid email address">
+                                    <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                    <input class="input100" type="email" name="email" id="email" placeholder="Your Email" />
+                                </div>
+                                <div class="form-group validate-input" data-validate="Invalid phone number">
+                                    <label for="phone"><i class="zmdi zmdi-phone"></i></label>
+                                    <input class="input100" type="tel" name="phone" id="phone" placeholder="Your Phone" />
+                                </div>
+                                <div class="form-group m-b-10">
+                                    <div id="g-recaptcha-reg" class="g-recaptcha"></div>
+                                    <span id="errre" style="color: red"></span>
+                                </div>
+                                <div class="form-group validate-input checkbox ">
+                                    <input class="input100" type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in <a href="#" class="term-service">Terms of service</a></label>
+                                </div>
+                                <div class="form-group validate-input form-button m-b-0">
+                                    <input type="submit" name="signup" id="signup" class="form-submit m-t-0" value="Register"/>
+                                </div>
+
+                                <input type="hidden" class="hiddenRecaptcha" name="hiddenRecaptcha" id="hiddenRecaptcha">
+                                <input type="hidden" name="account_refer" id="account_refer" value="">
+                            </form>
+                            
+                            <div id="show_result" style="display: none;">
+                                <p style="font-size: 1em;">We have sent a confirmation email to your registered email address <strong>hi@vndc.io</strong>. Please follow the instructions in the email to continue.</p>
+                                <div class="m-t-20" style="border-top: 1px solid #e6e6e6;">
+                                    <p style="font-size: 1em;">If you haven\'t received the email, please try the following: </p>
+                                    <ul style="color: #999; font-size: 1em;">
+                                        <li>Check your spam or junk mail folders.</li>
+                                        <li>Add VNDC.io to your email address whitelist.</li>
+                                        <li>Make sure your email client is functioning normally.</li>
+                                    </ul>
+                                </div>
+                            </div>                                
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/register_vndc.png" alt="Register image"></figure>
+                        <a href="login.html" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="footer">
+        <div class="page-footer">
+            <div class="container container-footer">
+                <div class="copyright ">
+                    <p style=" font-size: 1em; color: #b7b8b7;">Copyright © 2019 VNDC.io, All Rights Reserved.</p>
+                </div>
+                <div class="social">
+                    <ul id="social" class="float-r" style="list-style-type: none;">
+                        <li class="float-l m-l-20"><a target="_blank" href="https://twitter.com/0Vndc" style="color: #b7b8b7;"><i class="fa fa-twitter-square"></i> </a></li>
+                        <li class="float-l m-l-20"><a target="_blank" href="https://t.me/joinchat/AAAAAElqlke77-TPM4vHzQ" style="color: #b7b8b7;"><i class="fa fa-telegram"></i> </a></li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&render=explicit&hl=en" async defer></script>
+
+    <script type="text/javascript">
+        var correctCaptcha = function(response) {
+            $("#hiddenRecaptcha").val(response);
+        };
+        var loginfrm;
+        var recaptchaCallback = function(){
+          loginfrm = grecaptcha.render(document.getElementById('g-recaptcha-reg'), {
+            'sitekey': '6LeUfAsUAAAAALNIlBnebW_gouta1njipapDgcty',
+            'callback' : correctCaptcha,
+            'width':'100%'
+          });
+        }
+    </script>
+</body>
+</html>
