@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="993" height="24" viewBox="0 0 993 24" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="Group-3">
+   <g fill="#EDF1F5" id="Group-2">
+    <path id="Rectangle-Copy" d="m10,0l973,0c5.52285,0 10,4.47715 10,10l0,14l-993,0l0,-14c0,-5.52285 4.47715,-10 10,-10z"/>
+   </g>
+   <g id="Group">
+    <circle r="4.5" cy="12.5" cx="14.5" fill="#FF6057" id="Oval"/>
+    <circle r="4.5" cy="12.5" cx="30.5" fill="#FFC12E" id="Oval-Copy"/>
+    <circle r="4.5" cy="12.5" cx="47.5" fill="#28CA40" id="Oval-Copy-2"/>
+   </g>
+  </g>
+ </g>
+</svg>

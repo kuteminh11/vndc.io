@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="325px" height="288px" viewBox="0 0 325 288" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>graf</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M336,79.9056122 L302.530913,65.701 L303.060047,75.615256 C274.163306,77.4495094 152.75039,79.3847125 0,0 L0,2.00435345 C0,2.00435345 151.20891,91.6864254 303.630305,86.2987476 L304.147101,96 L336,79.9056122 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="vynosy" transform="translate(-263.000000, -3362.000000)">
+            <g id="how-it-work" transform="translate(263.000000, 3300.000000)">
+                <g id="graf">
+                    <g id="Group-63" transform="translate(162.500000, 150.000000) scale(-1, 1) translate(-162.500000, -150.000000) ">
+                        <g id="graf" transform="translate(0.000000, 124.000000)">
+                            <polygon id="Fill-1" fill="#F2A42B" points="276 171 324 171 324 122 276 122"></polygon>
+                            <polygon id="Fill-2" fill="#FCB74B" points="276 174 324 174 324 125 276 125"></polygon>
+                            <polygon id="Fill-3" fill="#3468FE" points="276 175 324 175 324 147 276 147"></polygon>
+                            <polygon id="Fill-4" fill="#F2A42B" points="207 169 255 169 255 94 207 94"></polygon>
+                            <polygon id="Fill-5" fill="#FCB74B" points="207 173 255 173 255 100 207 100"></polygon>
+                            <polygon id="Fill-6" fill="#3468FE" points="207 176 255 176 255 132 207 132"></polygon>
+                            <polygon id="Fill-7" fill="#F2A42B" points="139 173 187 173 187 77 139 77"></polygon>
+                            <polygon id="Fill-8" fill="#FCB74B" points="139 173 187 173 187 84 139 84"></polygon>
+                            <polygon id="Fill-9" fill="#3468FE" points="139 173 187 173 187 117 139 117"></polygon>
+                            <polygon id="Fill-10" fill="#F2A42B" points="0 172 48 172 48 0 0 0"></polygon>
+                            <polygon id="Fill-11" fill="#FCB74B" points="0 173 48 173 48 10 0 10"></polygon>
+                            <polygon id="Fill-12" fill="#3468FE" points="0 173 48 173 48 80 0 80"></polygon>
+                            <polygon id="Fill-13" fill="#F2A42B" points="69 171 117 171 117 43 69 43"></polygon>
+                            <polygon id="Fill-14" fill="#FCB74B" points="69 173 117 173 117 52 69 52"></polygon>
+                            <polygon id="Fill-15" fill="#3468FE" points="69 173 117 173 117 103 69 103"></polygon>
+                        </g>
+                        <g id="šipka" transform="translate(163.859670, 143.347329) scale(-1, 1) rotate(-39.000000) translate(-163.859670, -143.347329) translate(-4.140330, 95.347329)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-17"></g>
+                            <polygon id="Fill-16" fill="#3468FE" mask="url(#mask-2)" points="0 96 7 96 7 0 0 0"></polygon>
+                            <polygon id="Fill-18" fill="#3468FE" mask="url(#mask-2)" points="7 96 14 96 14 0 7 0"></polygon>
+                            <polygon id="Fill-19" fill="#3468FE" mask="url(#mask-2)" points="14 96 21 96 21 0 14 0"></polygon>
+                            <polygon id="Fill-20" fill="#3468FE" mask="url(#mask-2)" points="21 96 28 96 28 0 21 0"></polygon>
+                            <polygon id="Fill-21" fill="#3468FE" mask="url(#mask-2)" points="27 96 34 96 34 0 27 0"></polygon>
+                            <polygon id="Fill-22" fill="#3468FE" mask="url(#mask-2)" points="34 96 41 96 41 0 34 0"></polygon>
+                            <polygon id="Fill-23" fill="#3468FE" mask="url(#mask-2)" points="41 96 48 96 48 0 41 0"></polygon>
+                            <polygon id="Fill-24" fill="#3468FE" mask="url(#mask-2)" points="48 96 55 96 55 0 48 0"></polygon>
+                            <polygon id="Fill-25" fill="#3468FE" mask="url(#mask-2)" points="54 96 61 96 61 0 54 0"></polygon>
+                            <polygon id="Fill-26" fill="#3468FE" mask="url(#mask-2)" points="61 96 68 96 68 0 61 0"></polygon>
+                            <polygon id="Fill-27" fill="#3468FE" mask="url(#mask-2)" points="68 96 75 96 75 0 68 0"></polygon>
+                            <polygon id="Fill-28" fill="#3468FE" mask="url(#mask-2)" points="75 96 82 96 82 0 75 0"></polygon>
+                            <polygon id="Fill-29" fill="#3468FE" mask="url(#mask-2)" points="81 96 88 96 88 0 81 0"></polygon>
+                            <polygon id="Fill-30" fill="#3468FE" mask="url(#mask-2)" points="88 96 95 96 95 0 88 0"></polygon>
+                            <polygon id="Fill-31" fill="#3468FE" mask="url(#mask-2)" points="95 96 102 96 102 0 95 0"></polygon>
+                            <polygon id="Fill-32" fill="#3468FE" mask="url(#mask-2)" points="102 96 109 96 109 0 102 0"></polygon>
+                            <polygon id="Fill-33" fill="#3468FE" mask="url(#mask-2)" points="108 96 115 96 115 0 108 0"></polygon>
+                            <polygon id="Fill-34" fill="#3468FE" mask="url(#mask-2)" points="115 96 122 96 122 0 115 0"></polygon>
+                            <polygon id="Fill-35" fill="#3468FE" mask="url(#mask-2)" points="122 96 129 96 129 0 122 0"></polygon>
+                            <polygon id="Fill-36" fill="#3468FE" mask="url(#mask-2)" points="128 96 135 96 135 0 128 0"></polygon>
+                            <polygon id="Fill-37" fill="#3468FE" mask="url(#mask-2)" points="135 96 142 96 142 0 135 0"></polygon>
+                            <polygon id="Fill-38" fill="#3468FE" mask="url(#mask-2)" points="142 96 149 96 149 0 142 0"></polygon>
+                            <polygon id="Fill-39" fill="#3468FE" mask="url(#mask-2)" points="149 96 156 96 156 0 149 0"></polygon>
+                            <polygon id="Fill-40" fill="#3468FE" mask="url(#mask-2)" points="155 96 162 96 162 0 155 0"></polygon>
+                            <polygon id="Fill-41" fill="#3468FE" mask="url(#mask-2)" points="162 96 169 96 169 0 162 0"></polygon>
+                            <polygon id="Fill-42" fill="#3468FE" mask="url(#mask-2)" points="169 96 176 96 176 0 169 0"></polygon>
+                            <polygon id="Fill-43" fill="#3468FE" mask="url(#mask-2)" points="176 96 183 96 183 0 176 0"></polygon>
+                            <polygon id="Fill-44" fill="#3468FE" mask="url(#mask-2)" points="182 96 189 96 189 0 182 0"></polygon>
+                            <polygon id="Fill-45" fill="#3468FE" mask="url(#mask-2)" points="189 96 196 96 196 0 189 0"></polygon>
+                            <polygon id="Fill-46" fill="#3468FE" mask="url(#mask-2)" points="196 96 203 96 203 0 196 0"></polygon>
+                            <polygon id="Fill-47" fill="#3468FE" mask="url(#mask-2)" points="203 96 210 96 210 0 203 0"></polygon>
+                            <polygon id="Fill-48" fill="#3468FE" mask="url(#mask-2)" points="209 96 216 96 216 0 209 0"></polygon>
+                            <polygon id="Fill-49" fill="#3468FE" mask="url(#mask-2)" points="216 96 223 96 223 0 216 0"></polygon>
+                            <polygon id="Fill-50" fill="#3468FE" mask="url(#mask-2)" points="223 96 230 96 230 0 223 0"></polygon>
+                            <polygon id="Fill-51" fill="#3468FE" mask="url(#mask-2)" points="230 96 237 96 237 0 230 0"></polygon>
+                            <polygon id="Fill-52" fill="#3468FE" mask="url(#mask-2)" points="236 96 243 96 243 0 236 0"></polygon>
+                            <polygon id="Fill-53" fill="#3468FE" mask="url(#mask-2)" points="243 96 250 96 250 0 243 0"></polygon>
+                            <polygon id="Fill-54" fill="#3468FE" mask="url(#mask-2)" points="250 96 257 96 257 0 250 0"></polygon>
+                            <polygon id="Fill-55" fill="#3468FE" mask="url(#mask-2)" points="256 96 263 96 263 0 256 0"></polygon>
+                            <polygon id="Fill-56" fill="#3468FE" mask="url(#mask-2)" points="263 96 270 96 270 0 263 0"></polygon>
+                            <polygon id="Fill-57" fill="#3468FE" mask="url(#mask-2)" points="270 96 277 96 277 0 270 0"></polygon>
+                            <polygon id="Fill-58" fill="#3468FE" mask="url(#mask-2)" points="277 96 284 96 284 0 277 0"></polygon>
+                            <polygon id="Fill-59" fill="#3468FE" mask="url(#mask-2)" points="283 96 290 96 290 0 283 0"></polygon>
+                            <polygon id="Fill-60" fill="#3468FE" mask="url(#mask-2)" points="290 96 297 96 297 0 290 0"></polygon>
+                            <polygon id="Fill-61" fill="#3468FE" mask="url(#mask-2)" points="297 96 337 96 337 0 297 0"></polygon>
+                        </g>
+                    </g>
+                    <rect id="Rectangle-10" fill="#3468FE" fill-rule="nonzero" x="0" y="334" width="16" height="16"></rect>
+                    <text id="Amount-invested" font-family="OpenSans-Regular, Open Sans" font-size="13" font-weight="normal" fill="#4B5774">
+                        <tspan x="25.3903809" y="347">Amount invested</tspan>
+                    </text>
+                    <rect id="Rectangle-10" fill="#FCB74B" fill-rule="nonzero" x="175" y="334" width="16" height="16"></rect>
+                    <text id="Profit" font-family="OpenSans-Regular, Open Sans" font-size="13" font-weight="normal" fill="#4B5774">
+                        <tspan x="199" y="347">Profit</tspan>
+                    </text>
+                    <rect id="Rectangle-10" fill="#E99C26" fill-rule="nonzero" x="277" y="334" width="16" height="16"></rect>
+                    <text id="Fee" font-family="OpenSans-Regular, Open Sans" font-size="13" font-weight="normal" fill="#4B5774">
+                        <tspan x="301" y="347">Fee</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

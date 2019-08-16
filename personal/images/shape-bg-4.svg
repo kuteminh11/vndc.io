@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="459px" viewBox="0 0 1440 459" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="vynosy" transform="translate(0.000000, -1121.000000)" fill="#EDF5FF">
+            <g id="1-fees" transform="translate(-160.000000, 1074.000000)">
+                <path d="M153.686983,69.9104722 C429.362764,225.605785 1108.65745,168.000964 1517.65444,97.8381282 C1960.19741,21.9205294 1647.90983,349.461432 1707.08673,371.596762 C1804.84899,408.165081 1707.44304,464.412697 1630.28159,487.849842 C1509.00284,524.687246 1106.25187,426.971368 939.233858,487.849842 C617.702608,605.048769 165.454126,449.931744 95.3510452,417.672191 C-19.1723923,364.971584 -63.6960017,-52.8624154 153.686983,69.9104722 Z" id="Rectangle-3" transform="translate(879.693101, 289.222814) scale(-1, -1) translate(-879.693101, -289.222814) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
